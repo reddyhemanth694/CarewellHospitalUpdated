@@ -1,0 +1,507 @@
+
+/* =====================================================
+   CAREWELL HOSPITAL - APPOINTMENT FILTERS
+   Add once at the end of doctor-appointments.css
+   ===================================================== */
+
+/* Filter form */
+.appointment-filters {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+    margin: 0;
+    padding: 18px 24px;
+    box-sizing: border-box;
+}
+
+/* Each filter field */
+.appointment-filters .filter-field {
+    display: flex;
+    flex: 0 1 180px;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 150px;
+    margin: 0;
+}
+
+/* Labels */
+.appointment-filters .filter-field label {
+    display: block;
+    margin: 0;
+    color: #52637a;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Dropdowns and date input */
+.appointment-filters .filter-field select,
+.appointment-filters .filter-field input[type="date"] {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    margin: 0;
+    padding: 0 12px;
+    border: 1px solid #d7e1ee;
+    border-radius: 9px;
+    background: #fff;
+    color: #263852;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointment-filters select,
+.appointment-filters input[type="date"] {
+    cursor: pointer;
+}
+
+.appointment-filters .filter-field select:focus,
+.appointment-filters .filter-field input[type="date"]:focus {
+    outline: none;
+    border-color: #2878ee;
+    box-shadow: 0 0 0 3px rgba(40, 120, 238, 0.12);
+}
+
+/* Apply Filters button */
+.appointment-filters .filter-submit {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 132px;
+    height: 44px;
+    margin: 0;
+    padding: 0 18px;
+    border: 1px solid #1765d1;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #2878ee, #1765d1);
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(40, 120, 238, 0.16);
+    transition: all 0.2s ease;
+}
+
+.appointment-filters .filter-submit:hover {
+    background: linear-gradient(135deg, #1765d1, #1254b4);
+    box-shadow: 0 6px 14px rgba(40, 120, 238, 0.22);
+    transform: translateY(-1px);
+}
+
+.appointment-filters .filter-submit:active {
+    transform: translateY(0);
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .appointment-filters {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 650px) {
+    .appointment-filters {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .appointment-filters .filter-field {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .appointment-filters .filter-submit {
+        width: 100%;
+    }
+}
+
+/* ===== CareWell Appointment Filters ===== */
+
+.appointment-filters {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 24px;
+    box-sizing: border-box;
+}
+
+.appointment-filters .filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 0 1 175px;
+    min-width: 150px;
+    margin: 0;
+}
+
+.appointment-filters .filter-field label {
+    color: #52637a;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.appointment-filters .filter-field select,
+.appointment-filters .filter-field input[type="date"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #d7e1ee;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #263852;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointment-filters .filter-field select:focus,
+.appointment-filters .filter-field input[type="date"]:focus {
+    outline: none;
+    border-color: #2878ee;
+    box-shadow: 0 0 0 3px rgba(40, 120, 238, 0.12);
+}
+
+/* Apply Filters button */
+.appointment-filters .filter-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 128px;
+    height: 44px;
+    padding: 0 20px;
+    border: 1px solid #1765d1;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #2878ee, #1765d1);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(40, 120, 238, 0.16);
+    transition: all 0.2s ease;
+}
+
+.appointment-filters .filter-submit:hover {
+    background: linear-gradient(135deg, #1765d1, #1254b4);
+    box-shadow: 0 6px 14px rgba(40, 120, 238, 0.22);
+    transform: translateY(-1px);
+}
+
+.appointment-filters .filter-submit:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .appointment-filters {
+        justify-content: flex-start;
+        padding: 16px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .appointment-filters {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .appointment-filters .filter-field {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .appointment-filters .filter-submit {
+        width: 100%;
+    }
+}
+
+/* ===== Professional appointment card ===== */
+
+.content-area .appointments-card {
+    margin-top: 22px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e4eaf2;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(25, 48, 80, 0.05);
+}
+
+.content-area .appointments-heading {
+    padding: 22px 24px 18px;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.content-area .appointments-heading h3 {
+    margin: 0;
+    color: #172b4d;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Filters */
+.content-area .appointment-filters {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 22px 24px;
+    background: #fff;
+    border-bottom: 1px solid #edf1f6;
+    box-sizing: border-box;
+}
+
+.content-area .appointment-filters .filter-field {
+    display: flex;
+    flex: 1 1 170px;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+    max-width: 230px;
+    margin: 0;
+}
+
+.content-area .appointment-filters .custom-date-field[style*="display:none"] {
+    display: none !important;
+}
+
+.content-area .appointment-filters label {
+    color: #52637a;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.content-area .appointment-filters select,
+.content-area .appointment-filters input[type="date"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #d7e1ee;
+    border-radius: 8px;
+    background: #fff;
+    color: #263852;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.content-area .appointment-filters select:focus,
+.content-area .appointment-filters input[type="date"]:focus {
+    outline: none;
+    border-color: #2878ee;
+    box-shadow: 0 0 0 3px rgba(40, 120, 238, .12);
+}
+
+/* Button */
+.content-area .appointment-filters .filter-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 44px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #2878ee, #1765d1);
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(40, 120, 238, .16);
+    transition: .2s ease;
+}
+
+.content-area .appointment-filters .filter-submit:hover {
+    background: #1254b4;
+    box-shadow: 0 6px 14px rgba(40, 120, 238, .2);
+    transform: translateY(-1px);
+}
+
+/* Helper text */
+.content-area .filter-note {
+    margin: 0;
+    padding: 14px 24px;
+    background: #f9fbfe;
+    color: #718198;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Table wrapper: matches the actual JSP class */
+.content-area .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.content-area .table-container table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+}
+
+.content-area .table-container thead th {
+    padding: 15px 16px;
+    background: #f6f9fd;
+    border-bottom: 1px solid #e3eaf3;
+    color: #52637a;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.content-area .table-container tbody td {
+    padding: 16px;
+    border-bottom: 1px solid #edf1f6;
+    color: #34465e;
+    font-size: 13px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.content-area .table-container tbody tr:hover {
+    background: #f8fbff;
+}
+
+.content-area .table-container tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.content-area .table-container .no-data {
+    padding: 32px 16px;
+    color: #718198;
+    text-align: center;
+}
+
+/* Status badges */
+.content-area .table-container .status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #eef2f7;
+    color: #52637a;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.content-area .table-container .status.pending {
+    background: #fff4d6;
+    color: #986800;
+}
+
+.content-area .table-container .status.confirmed {
+    background: #e3f0ff;
+    color: #1765d1;
+}
+
+.content-area .table-container .status.completed {
+    background: #e1f7eb;
+    color: #16834a;
+}
+
+.content-area .table-container .status.cancelled {
+    background: #ffe8e8;
+    color: #c43838;
+}
+
+/* Smaller screens */
+@media (max-width: 900px) {
+    .content-area .appointment-filters {
+        padding: 18px;
+    }
+
+    .content-area .appointments-heading {
+        padding: 18px;
+    }
+
+    .content-area .table-container table {
+        min-width: 850px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-area .appointment-filters {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .content-area .appointment-filters .filter-field {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .content-area .appointment-filters .filter-submit {
+        width: 100%;
+    }
+}
+
+/* Confirmed appointment - green badge */
+.content-area .table-container .status.confirmed {
+    background: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Pending appointment - yellow badge */
+.content-area .table-container .status.pending {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Cancelled appointment - red badge */
+.content-area .table-container .status.cancelled {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.doctor-account-menu {
+    position: relative;
+}
+
+.doctor-dropdown[hidden] {
+    display: none !important;
+}
+
+.doctor-dropdown:not([hidden]) {
+    display: block;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1000;
+}

@@ -1,0 +1,34 @@
+# Local backup and duplicate copies (never push these)
+CareWellHospital_backup_original/
+CarewellHospital-main/
+
+# Eclipse / IDE files
+.metadata/
+.settings/
+.project
+.classpath
+.idea/
+.vscode/
+*.iml
+Servers/
+RemoteSystemsTempFiles/
+
+# Build output
+build/
+target/
+bin/
+*.class
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Logs and operating system files
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# NOTE: CareWellHospital.war is intentionally NOT ignored.
+# Render builds the Docker image from this WAR (see Dockerfile).

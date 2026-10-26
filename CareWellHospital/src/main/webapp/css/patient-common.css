@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+/* CareWell Hospital — shared patient portal styles */
+
+:root {
+    --cw-navy: #112947;
+    --cw-navy-light: #19385e;
+    --cw-blue: #2878ef;
+    --cw-text: #25344d;
+    --cw-muted: #8292a8;
+    --cw-border: #e3e9f1;
+    --cw-page: #f5f8fc;
+    --cw-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cw-page);
+    color: var(--cw-text);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.layout,
+.page-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    z-index: 100;
+    inset: 0 auto 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 268px;
+    min-width: 268px;
+    background: var(--cw-navy);
+    color: var(--cw-white);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: #eef5ff;
+    color: var(--cw-blue);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.brand h2 {
+    margin: 0 0 3px;
+    color: var(--cw-white);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.brand span {
+    display: block;
+    color: #91a7c5;
+    font-size: 9px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.navigation {
+    flex: 1;
+    width: 100%;
+    padding: 20px 12px;
+    overflow-y: auto;
+}
+
+.nav-section-title,
+.section-title {
+    padding: 10px 18px;
+    margin-top: 3px;
+    color: #7590b2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-section-title:first-child,
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.nav-item,
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 44px;
+    height: 44px;
+    margin: 3px 0;
+    padding: 0 18px;
+    border-radius: 9px;
+    color: #c8d5e7;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 18px;
+    width: 18px;
+    min-width: 18px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.nav-item:hover,
+.sidebar-link:hover {
+    background: var(--cw-navy-light);
+    color: var(--cw-white);
+}
+
+.nav-item.active,
+.sidebar-link.active {
+    background: var(--cw-blue);
+    color: var(--cw-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.nav-item.active:hover,
+.sidebar-link.active:hover {
+    background: var(--cw-blue);
+    color: var(--cw-white);
+      font-size: 14px;
+}
+
+.sidebar-bottom {
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto;
+    padding: 14px 13px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-bottom .nav-item,
+.sidebar-bottom .sidebar-link {
+    color: #aebdd1;
+}
+
+/* Main page area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: calc(100% - 268px);
+    min-width: 0;
+    min-height: 100vh;
+    margin-left: 268px;
+    background: var(--cw-page);
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+    min-height: 90px;
+    padding: 18px 34px;
+    background: var(--cw-white);
+    border-bottom: 1px solid var(--cw-border);
+}
+
+.top-header h1 {
+    margin: 0 0 5px;
+    color: #172a46;
+    font-size: 24px;
+    font-weight: 750;
+    line-height: 1.25;
+}
+
+.top-header p {
+    margin: 0;
+    color: var(--cw-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.patient-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #e9f2ff;
+    color: #176ce5;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.patient-info strong {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--cw-text);
+    font-size: 13px;
+}
+
+.patient-info span {
+    display: block;
+    color: var(--cw-muted);
+    font-size: 11px;
+}
+
+/* Shared content and footer */
+.content,
+.content-area {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 30px 34px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 58px;
+    padding: 18px 34px;
+    background: var(--cw-white);
+    border-top: 1px solid var(--cw-border);
+    color: var(--cw-muted);
+    font-size: 11px;
+}
+
+.navigation::-webkit-scrollbar {
+    width: 5px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+    background: #345372;
+    border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .sidebar {
+        width: 240px;
+        min-width: 240px;
+    }
+
+    .main-content {
+        width: calc(100% - 240px);
+        margin-left: 240px;
+    }
+
+    .top-header {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .content,
+    .content-area {
+        padding: 24px;
+    }
+
+    .footer {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+/* Mobile: sidebar becomes an off-canvas panel */
+@media (max-width: 760px) {
+    .sidebar {
+        width: 260px;
+        min-width: 260px;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .top-header {
+        min-height: 82px;
+        padding: 16px 18px;
+    }
+
+    .top-header h1 {
+        font-size: 21px;
+    }
+
+    .patient-info {
+        gap: 8px;
+    }
+
+    .patient-avatar {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .patient-info strong {
+        font-size: 12px;
+    }
+
+    .content,
+    .content-area {
+        padding: 20px 16px;
+    }
+
+    .footer {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .patient-info {
+        max-width: 120px;
+    }
+
+    .patient-info strong,
+    .patient-info span {
+        overflow-wrap: anywhere;
+    }
+
+    .content,
+    .content-area {
+        padding: 16px 12px;
+    }
+
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+/* Fix CareWell patient dashboard layout */
+.page-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page-container > .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 268px;
+    min-width: 268px;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.page-container > .main-content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 268px);
+    min-width: 0;
+    min-height: 100vh;
+    margin-left: 268px;
+    flex: 1 1 auto;
+}
+
+.main-content > .content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: 1 0 auto;
+}
+
+@media (max-width: 1100px) and (min-width: 701px) {
+    .page-container > .sidebar {
+        width: 240px;
+        min-width: 240px;
+    }
+
+    .page-container > .main-content {
+        width: calc(100% - 240px);
+        margin-left: 240px;
+    }
+}
